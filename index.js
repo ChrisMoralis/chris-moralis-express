@@ -16,7 +16,8 @@ app.post('/webhook', (req, res) => {
     res.send('Something else from request')
 })
 
-app.listen(80, () => {
-    console.log("LISTENING ON PORT 80")
+const port = process.env.PORT || 80;
+app.listen(port, () => {
+    console.log(`Serving on port ${port}`);
 })
  
